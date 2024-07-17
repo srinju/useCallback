@@ -7,7 +7,7 @@ function App() {
 
   const logSomething = useCallback(() => { //now after using usecallback we see that when we click the counter button it dosent rerender anything and only when we click the child component then only it shows the child clicked message this is the use of useCallback
     console.log("child clicked!!");      
-  },[])
+  },[]) //only if something in the dependency array changes then it will only consider the logsomething function to change 
 
   //the child wala onclick will call an onCLick func above and will show child clicked 
   return <div> 
